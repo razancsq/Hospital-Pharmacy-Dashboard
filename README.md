@@ -1,6 +1,6 @@
 # Hospital Pharmacy Dashboard
 
-##Prototype Design Summary
+## Prototype Design Summary
 
 Before starting the Power BI implementation, a complete set of dashboard prototypes was designed to organize the project structure and identify the most important information that hospital management needs for daily decision-making.
 
