@@ -1,6 +1,6 @@
 # Hospital Pharmacy Dashboard
 
-Prototype Design Summary
+##Prototype Design Summary
 
 Before starting the Power BI implementation, a complete set of dashboard prototypes was designed to organize the project structure and identify the most important information that hospital management needs for daily decision-making.
 
@@ -25,3 +25,21 @@ A dedicated dashboard was also created for the Tablets Category, providing a foc
 Finally, two supporting dashboards complete the prototype. The Data Flow Architecture illustrates how data moves from multiple Excel sources through Power Query into Power BI, while the KPIs & Performance Metrics dashboard summarizes the overall pharmacy performance using key indicators, alerts, inventory distribution, and system status.
 
 Together, these twelve prototypes provide a clear roadmap for building a practical, organized, and user-friendly Hospital Pharmacy Dashboard that supports inventory monitoring, improves operational visibility, and helps hospital staff make timely and informed decisions.
+
+## Data Cleaning
+
+Before building the dashboard, all four Excel source files were cleaned and standardized to improve data quality and Power BI performance.
+
+The following preprocessing steps were performed:
+
+- Removed duplicate records and empty rows within the data tables.
+- Deleted unnecessary empty columns.
+- Removed extra blank rows outside the data blocks to reduce file size.
+  - In the main pharmacy store file, approximately 8,892 empty cells (228 columns × 39 rows) were removed, reducing the file size from **27 MB** to **4 MB**.
+- Trimmed unnecessary whitespace from text fields.
+- Standardized date formats across all datasets.
+- Replaced missing quantity values with **0** where appropriate.
+- Validated data types (numeric, text, and date).
+- Renamed selected columns to English for consistency and to avoid language conflicts.
+
+*Note*: The expired items dataset contained four records with an expiry date of `31/12/9999`. These values were temporarily replaced with the date from the previous row for prototype development, but they should be verified because incorrect expiry dates represent a potential patient safety risk.
